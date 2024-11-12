@@ -41,6 +41,7 @@ export type ProducerCodecOptions = {
 	videoGoogleStartBitrate?: number;
 	videoGoogleMaxBitrate?: number;
 	videoGoogleMinBitrate?: number;
+	videoGoogleMaxQp?: number;
 };
 
 export type ProducerEvents = {

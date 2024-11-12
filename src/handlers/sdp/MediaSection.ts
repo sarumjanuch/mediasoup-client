@@ -199,6 +199,7 @@ export class AnswerMediaSection extends MediaSection {
 							videoGoogleStartBitrate,
 							videoGoogleMaxBitrate,
 							videoGoogleMinBitrate,
+							videoGoogleMaxQp
 						} = codecOptions;
 
 						const offerCodec = offerRtpParameters!.codecs.find(
@@ -269,6 +270,11 @@ export class AnswerMediaSection extends MediaSection {
 								if (videoGoogleMinBitrate !== undefined) {
 									codecParameters['x-google-min-bitrate'] =
 										videoGoogleMinBitrate;
+								}
+
+								if (videoGoogleMaxQp !== undefined) {
+									codecParameters['x-google-max-quantization'] =
+										videoGoogleMaxQp
 								}
 
 								break;
